@@ -1,0 +1,81 @@
+html, body {
+    margin: 0;
+    min-height: 100%;
+    min-width: 100%;
+    background-color: #DDDDDD;
+    font-family: 'Open Sans', sans-serif;
+    --mdc-theme-primary: #2e5186;
+}
+
+.form-box {
+    max-width: 650px;
+    background-color: #FFFFFF;
+    padding: 30px;
+    margin: 20px auto auto;
+    border-radius: 10px;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+.section-subtitle {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.page-title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    padding: 0;
+}
+
+.page-title-wrapper {
+    justify-self: center;
+    align-self: center;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+}
+
+.page-title-wrapper img {
+    width: 32px;
+    height: 32px;
+    margin: 0 15px;
+}
+
+.weather-inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 15px;
+    column-gap: 15px;
+}
+
+.submit-button {
+    margin-left: auto;
+}
+
+.submit-button-wrapper {
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: end;
+}
+
+.results-table {
+    display: grid;
+    grid-template-columns: max-content max-content max-content max-content max-content;
+    align-items: baseline;
+    row-gap: 5px;
+    column-gap: 5px;
+}
+
+.result-percentage {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 0 10px;
+}
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Snowfall Transit Prediction</title>
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="static/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="static/index.js"></script>
+</head>
+<body>
+<header class="mdc-top-app-bar">
+    <div class="mdc-top-app-bar__row page-titlebar">
+        <div class="page-title-wrapper">
+            <img src="static/snowflake.svg" alt="snowflake">
+            <span class="mdc-top-app-bar__title page-title">
+                Snowfall Transit Prediction
+            </span>
+            <img src="static/snowflake.svg" alt="snowflake">
+        </div>
+    </div>
+</header>
+<main class="mdc-top-app-bar--fixed-adjust">
+    <div class="form-box">
+        <h1>Results</h1>
+        <div class="results-table">
+            {% for result in results %}
+            <div>{{ result.display_name }} is estimated to be between</div>
+            <div class="result-percentage">{{ result.low_percentage }}%</div>
+            <div>and</div>
+            <div class="result-percentage">{{ result.high_percentage }}%</div>
+            <div>of normal</div>
+            {% endfor %}
+        </div>
+        <div class="submit-button-wrapper">
+            <div class="mdc-touch-target-wrapper submit-button" onclick="onReturnClick()">
+                <button class="mdc-button mdc-button--outlined">
+                    <span class="mdc-button__ripple"></span>
+                    <span class="mdc-button__label">Return</span>
+                    <span class="mdc-button__touch"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>
