@@ -28,12 +28,26 @@
         <h1>Results</h1>
         <div class="results-table">
             {% for result in results %}
-            <div>{{ result.display_name }} is estimated to be between</div>
-            <div class="result-percentage">{{ result.low_percentage }}%</div>
-            <div>and</div>
-            <div class="result-percentage">{{ result.high_percentage }}%</div>
-            <div>of normal</div>
+                <div>{{ result.display_name }} is estimated to be between</div>
+                <div class="result-percentage">{{ result.low_percentage }}%</div>
+                <div>and</div>
+                <div class="result-percentage">{{ result.high_percentage }}%</div>
+                <div>of normal</div>
             {% endfor %}
+            {% if times.low_car_trip_time is not none %}
+                <div>Car trip time is estimated to be between</div>
+                <div class="result-percentage">{{ times.low_car_trip_time }}</div>
+                <div>and</div>
+                <div class="result-percentage">{{ times.high_car_trip_time }}</div>
+                <div>minutes</div>
+            {% endif %}
+            {% if times.low_mbta_trip_time is not none %}
+                <div>MBTA trip time is estimated to be between</div>
+                <div class="result-percentage">{{ times.low_mbta_trip_time }}</div>
+                <div>and</div>
+                <div class="result-percentage">{{ times.high_mbta_trip_time }}</div>
+                <div>minutes</div>
+            {% endif %}
         </div>
         <div class="submit-button-wrapper">
             <div class="mdc-touch-target-wrapper submit-button" onclick="onReturnClick()">
