@@ -34,14 +34,14 @@
                 <div class="result-percentage">{{ result.high_percentage }}%</div>
                 <div>of normal</div>
             {% endfor %}
-            {% if times.low_car_trip_time is not none %}
+            {% if times.low_car_trip_time is not undefined %}
                 <div>Car trip time is estimated to be between</div>
                 <div class="result-percentage">{{ times.low_car_trip_time }}</div>
                 <div>and</div>
                 <div class="result-percentage">{{ times.high_car_trip_time }}</div>
                 <div>minutes</div>
             {% endif %}
-            {% if times.low_mbta_trip_time is not none %}
+            {% if times.low_mbta_trip_time is not undefined %}
                 <div>MBTA trip time is estimated to be between</div>
                 <div class="result-percentage">{{ times.low_mbta_trip_time }}</div>
                 <div>and</div>
